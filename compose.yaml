@@ -1,0 +1,10 @@
+services:
+  pyodide:
+    image: pyodide
+    build:
+      context: dist/lib
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
